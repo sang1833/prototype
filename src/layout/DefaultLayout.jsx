@@ -1,15 +1,13 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import Sidebar from "../components/Sidebar";
 
 const DefaultLayout = () => {
   return (
-    <div>
-      <h1 className="p-4 font-bold">DefaultLayout</h1>
-      <ul>
-        <li>
-          <Link to="/Header">Header</Link>
-        </li>
-      </ul>
-      <Outlet />
+    <div className="w-full flex">
+      <Sidebar />
+      <div className="w-full">
+        <Outlet />
+      </div>
     </div>
   );
 };
